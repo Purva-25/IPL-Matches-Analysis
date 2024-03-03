@@ -1,0 +1,9 @@
+DAX (Power query):-
+# Data cleaning in IPL 'Matches 2008-2020'
+1] Table.ReplaceValue(#"Filtered Rows1","Rising Pune Supergiants","Rising Pune Supergiant",Replacer.ReplaceText,{"team2"}) 
+
+# Data modelling 
+# create new table Date
+1] Date Table = CALENDAR(MIN('IPL Matches 2008-2020'[date]),MAX('IPL Matches 2008-2020'[date]))
+2] #new column 
+   Year = YEAR('Date Table'[Date])
